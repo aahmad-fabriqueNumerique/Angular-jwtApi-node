@@ -1,0 +1,22 @@
+<h2>NOS VOITURS AMERICAINES</h2>
+
+<div class="row mt-5">
+
+    <div class="card mb-3" *ngFor="let car of usaCars">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{car.Image}}" width="500" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{car.Name | uppercase}}</h5>
+                    <p class="card-text">Cylinders: {{car.Cylinders}}</p>
+                    <p class="card-text">Year: {{car.Year}}</p>
+                    <p class="card-text">Origine: {{car.Origin}}</p>
+                    <button type="button" class="btn btn-warning">Voir plus</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
