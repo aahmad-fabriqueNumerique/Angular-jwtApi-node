@@ -8,7 +8,7 @@ import { AuthServiceService } from '../service/auth-service.service';
 })
 export class AuthGuard implements CanActivate {
 
-  
+  // ng g guard auth
   constructor(
     private _authServ: AuthServiceService,
     private _router: Router
@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
     if(this._authServ.loggedIn()) {
       return true
     } else {
-      window.alert('connectez_vous')
+      window.alert('connectez-vous')
       this._router.navigate(['/login'])
       return false
     }

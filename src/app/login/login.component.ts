@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     this.authServ.loginUser(this.loginUserData).subscribe((res: any) => {
       console.log(res);
       localStorage.setItem('token', res.token)
-      this._router.navigate(['/voitures-americaines'])
+      this._router.navigate(['/nos-offres'])
       
     }, (err) => {
       console.log(err);
